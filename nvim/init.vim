@@ -92,6 +92,9 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 " Theme
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
+" Glow Markdown previews
+Plug 'ellisonleao/glow.nvim'
+
 call plug#end()
 
 " colorscheme gruvbox
