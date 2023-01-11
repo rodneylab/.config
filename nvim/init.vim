@@ -95,6 +95,9 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " Glow Markdown previews
 Plug 'ellisonleao/glow.nvim'
 
+" Autopairs
+Plug 'windwp/nvim-autopairs'
+
 call plug#end()
 
 " colorscheme gruvbox

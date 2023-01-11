@@ -7,4 +7,5 @@ require('rodneylab/catppuccin')
 require('rodneylab/filetype')
 require('rodneylab/neovide')
 require('rodneylab/display')
+require('rodneylab/nvim-autopairs')
 
