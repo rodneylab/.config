@@ -98,6 +98,10 @@ Plug 'ellisonleao/glow.nvim'
 " Autopairs
 Plug 'windwp/nvim-autopairs'
 
+" Trouble: panel for errors and warnings
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
+
 call plug#end()
 
 " colorscheme gruvbox
