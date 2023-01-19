@@ -102,6 +102,9 @@ Plug 'windwp/nvim-autopairs'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 
+" key mappings with `[` and `]`
+Plug 'https://tpope.io/vim/unimpaired'
+
 call plug#end()
 
 " colorscheme gruvbox
