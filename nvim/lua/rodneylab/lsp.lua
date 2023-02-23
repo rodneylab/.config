@@ -26,13 +26,25 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-local servers = { 'astro','clangd', 'denols','pylsp', 'rust_analyzer', 'svelte', 'tsserver' }
+local servers = { 'astro','clangd', 'pylsp', 'rust_analyzer', 'svelte' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup  {
         capabilities = capabilities,
         on_attach = on_attach,
     }
 end
+
+nvim_lsp.denols.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+}
+
+nvim_lsp.tsserver.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    root_dir = nvim_lsp.util.root_pattern("package.json"),
+}
 
 -- autoformat on save
 vim.cmd 'autocmd BufWritePre *.cc lua vim.lsp.buf.format({async = false})'

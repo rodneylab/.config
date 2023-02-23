@@ -1,3 +1,4 @@
+require('rodneylab/tree')
 require('rodneylab/telescope')
 require('rodneylab/lightline')
 require('rodneylab/gitsigns')

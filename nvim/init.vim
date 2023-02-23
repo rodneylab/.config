@@ -105,6 +105,10 @@ Plug 'folke/trouble.nvim'
 " key mappings with `[` and `]`
 Plug 'https://tpope.io/vim/unimpaired'
 
+" file explorer
+"Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+
 call plug#end()
 
 " colorscheme gruvbox
