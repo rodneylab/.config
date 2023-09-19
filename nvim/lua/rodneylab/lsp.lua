@@ -26,7 +26,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-local servers = { 'astro','clangd', 'pylsp', 'rust_analyzer', 'svelte' }
+local servers = { 'astro','clangd', 'cssls', 'graphql', 'pylsp', 'rust_analyzer', 'svelte', 'taplo' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup  {
         capabilities = capabilities,
