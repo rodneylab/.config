@@ -112,8 +112,9 @@ Plug 'nvim-tree/nvim-tree.lua'
 call plug#end()
 
 " colorscheme gruvbox
-colorscheme catppuccin
 
-set background=dark
+if exists("g:neovide")
+    colorscheme catppuccin
+endif
 
 lua require('rodneylab')

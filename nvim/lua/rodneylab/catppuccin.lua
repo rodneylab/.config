@@ -1,7 +1,7 @@
 require("catppuccin").setup {
     flavour = "mocha",
     term_colors = true,
-    transparent_background = false,
+    transparent_background = true,
     color_overrides = {
         mocha = {
             base = "#000000",
