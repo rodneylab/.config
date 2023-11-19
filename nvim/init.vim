@@ -3,8 +3,8 @@
 " enable syntax highlighting
 syntax on
 
-" Better colours
-set termguicolors
+" termguicolors enabled for Neovide in neovide.lua
+set notermguicolors
 
 " number of spaces in a <Tab>
 set tabstop=4
@@ -50,7 +50,7 @@ set mouse=a
 set ignorecase
 set smartcase
 
-" hide inbuilt  mode (using lightline for this)
+" hide inbuilt mode (using lightline for this)
 set noshowmode
 
 set guifont=JetBrains\ Mono:h14
@@ -59,8 +59,6 @@ set guifont=JetBrains\ Mono:h14
 set clipboard+=unnamedplus 
 
 call plug#begin('~/.config/nvim/plugged')
-
-Plug 'gruvbox-community/gruvbox'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -90,6 +88,7 @@ Plug 'onsails/lspkind-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Theme
+Plug 'joshdick/onedark.vim', { 'as': 'onedark' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " Glow Markdown previews
@@ -106,12 +105,14 @@ Plug 'folke/trouble.nvim'
 Plug 'https://tpope.io/vim/unimpaired'
 
 " file explorer
-"Plug 'nvim-tree/nvim-web-devicons'
+" Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
 call plug#end()
 
-" colorscheme gruvbox
+set background=dark
+
+colorscheme onedark
 
 if exists("g:neovide")
     colorscheme catppuccin

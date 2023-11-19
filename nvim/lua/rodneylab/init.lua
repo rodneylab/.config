@@ -10,4 +10,3 @@ require('rodneylab/neovide')
 require('rodneylab/display')
 require('rodneylab/nvim-autopairs')
 require('rodneylab/trouble')
-

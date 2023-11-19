@@ -1,4 +1,5 @@
 if vim.g.neovide then
+    termguicolors = true
     local keymapOpts = {
         silent = true,
         noremap = true
