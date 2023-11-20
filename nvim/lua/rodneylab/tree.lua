@@ -14,7 +14,10 @@ require("nvim-tree").setup({
     hijack_netrw = true,
     view = {
         adaptive_size = false,
-        side = "left",
+        float = {
+            enable = true
+        },
+        side = "right",
         --width = 30,
         width = 22,
     }
