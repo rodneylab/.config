@@ -20,12 +20,6 @@ set shiftwidth=4
 " adds line numbers
 set number
 
-" columns used for the line number
-set numberwidth=4
-
-" for gitsigns coloured tabs on editied lines
-set signcolumn=number
-
 " highlights the matched text pattern when searching
 set incsearch
 set nohlsearch
