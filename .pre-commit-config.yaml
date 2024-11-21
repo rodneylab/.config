@@ -5,11 +5,11 @@ repos:
         stages:
           - commit-msg
     repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.29.1
+    rev: v3.31.0
   - hooks:
       - id: gitleaks
     repo: https://github.com/gitleaks/gitleaks
-    rev: v8.20.1
+    rev: v8.21.2
   - hooks:
       - args:
           - --markdown-linebreak-ext=md
@@ -24,8 +24,8 @@ repos:
   - hooks:
       - id: yamlfmt
     repo: https://github.com/google/yamlfmt
-    rev: v0.13.0
-  - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v0.20.0
-    hooks:
-      - id: stylua # or stylua-system / stylua-github
+    rev: v0.14.0
+  - hooks:
+      - id: stylua
+    repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v2.0.1
