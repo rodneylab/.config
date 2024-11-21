@@ -1,0 +1,31 @@
+fail_fast: false
+repos:
+  - hooks:
+      - id: commitizen
+        stages:
+          - commit-msg
+    repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.29.1
+  - hooks:
+      - id: gitleaks
+    repo: https://github.com/gitleaks/gitleaks
+    rev: v8.20.1
+  - hooks:
+      - args:
+          - --markdown-linebreak-ext=md
+        id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - exclude: .vscode
+        id: check-json
+      - id: no-commit-to-branch
+    repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+  - hooks:
+      - id: yamlfmt
+    repo: https://github.com/google/yamlfmt
+    rev: v0.13.0
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v0.20.0
+    hooks:
+      - id: stylua # or stylua-system / stylua-github
