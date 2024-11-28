@@ -1,22 +1,19 @@
 require("catppuccin").setup({
-	flavour = "mocha",
-	term_colors = true,
-	transparent_background = true,
+	flavour = "default",
+	background = {
+		light = "latte",
+		dark = "mocha",
+	},
+	transparent_background = false,
 	color_overrides = {
 		mocha = {
-			base = "#000000",
+			base = "#1b1b29",
 		},
 	},
 	integrations = {
+		cmp = true,
+		gitsigns = true,
 		nvimtree = true,
-	},
-	highlight_overrides = {
-		mocha = function(mocha)
-			return {
-				TabLineSel = { bg = mocha.pink },
-				NvimTreeNormal = { bg = mocha.none },
-				CmpBorder = { fg = mocha.surface2 },
-			}
-		end,
+		treesitter = true,
 	},
 })

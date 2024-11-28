@@ -52,6 +52,7 @@ set noshowmode
 
 set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NF:h13.5:#e-subpixelantialias
 set linespace=5
+" set neovide_scale_factor=1.0
 
 " system clipboard
 set clipboard+=unnamedplus
@@ -154,7 +155,6 @@ Plug 'ellisonleao/glow.nvim'
 call plug#end()
 
 set background=dark
-
 colorscheme onedark
 
 if exists("g:neovide")
