@@ -139,8 +139,8 @@ Plug 'https://tpope.io/vim/commentary'
 " Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
-" c#
-Plug 'sbdchd/neoformat'
+" Formatting
+Plug 'stevearc/conform.nvim'
 
 " lldb
 Plug 'sakhnik/nvim-gdb'
