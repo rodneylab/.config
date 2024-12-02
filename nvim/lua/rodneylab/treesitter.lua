@@ -21,6 +21,7 @@ treesitter.setup({
 		"html",
 		"javascript",
 		"json",
+		"just",
 		"lua",
 		"markdown",
 		"markdown_inline",

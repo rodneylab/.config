@@ -102,6 +102,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
 " Plug 'simrat39/rust-tools.nvim' deprecated, replaced by mrcjkb/rustaceanvim
 Plug 'mrcjkb/rustaceanvim'
+Plug 'saecki/crates.nvim', { 'tag': 'stable' }
 Plug 'rafamadriz/friendly-snippets'
 
 " Linting
