@@ -7,28 +7,28 @@ syntax on
 set notermguicolors
 
 " number of spaces in a <Tab>
-set tabstop=4
-set softtabstop=4
-set expandtab
+" set tabstop=4
+" set softtabstop=4
+" set expandtab
 
 " enable autoindents
-set smartindent
+" set smartindent
 filetype plugin indent on
 
 " number of spaces used for autoindents
 set shiftwidth=4
 
 " adds line numbers
-set number
-set relativenumber
+" set number
+" set relativenumber
 
 " highlights the matched text pattern when searching
 set incsearch
 set nohlsearch
 
 " opens splits intuitively
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 
 " navigate buffers without losing unsaved work
 set hidden
@@ -46,7 +46,7 @@ set mouse=a
 set ignorecase
 set smartcase
 
-set backspace=indent,eol,start
+"set backspace=indent,eol,start
 " hide inbuilt mode (using lightline for this)
 set noshowmode
 
@@ -55,10 +55,12 @@ set linespace=5
 " set neovide_scale_factor=1.0
 
 " system clipboard
-set clipboard+=unnamedplus
+"set clipboard+=unnamedplus
 
 " completion
 set completeopt=menuone,noselect,noinsert
+
+lua require('rodneylab.core')
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -162,4 +164,4 @@ if exists("g:neovide")
     colorscheme catppuccin
 endif
 
-lua require('rodneylab')
+lua require('rodneylab.plugins')
