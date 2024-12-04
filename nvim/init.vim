@@ -71,7 +71,8 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 
 " Lightline
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'nvim-lualine/lualine.nvim'
 
 " vim-fugitive
 Plug 'tpope/vim-fugitive'
@@ -141,6 +142,9 @@ Plug 'https://tpope.io/vim/commentary'
 " file explorer
 " Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
+
+" tab styling
+Plug 'akinsho/bufferline.nvim'
 
 " Formatting
 Plug 'stevearc/conform.nvim'
