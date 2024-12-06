@@ -70,8 +70,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 
-" Lightline
-" Plug 'itchyny/lightline.vim'
+" Status bar
 Plug 'nvim-lualine/lualine.nvim'
 
 " vim-fugitive
