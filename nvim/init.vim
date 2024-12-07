@@ -126,6 +126,9 @@ Plug 'ellisonleao/glow.nvim'
 " Autopairs
 Plug 'windwp/nvim-autopairs'
 
+" Wrap word in quotes or replace wrapping characters
+Plug 'https://tpope.io/vim/surround.git'
+
 " Trouble: panel for errors and warnings
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
@@ -136,7 +139,9 @@ Plug 'folke/todo-comments.nvim'
 Plug 'https://tpope.io/vim/unimpaired'
 
 " comments
-Plug 'https://tpope.io/vim/commentary'
+" Plug 'https://tpope.io/vim/commentary'
+Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " file explorer
 " Plug 'nvim-tree/nvim-web-devicons'

@@ -8,6 +8,23 @@ treesitter.wgsl = {
 }
 
 treesitter.setup({
+	sync_install = false,
+	auto_install = true,
+	ignore_install = {},
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = false,
+	},
+	indent = { enable = true },
+	-- requires nvim-ts-autotag
+	autotag = {
+		enable = true,
+	},
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
 	ensure_installed = {
 		"astro",
 		"bash",
@@ -37,33 +54,17 @@ treesitter.setup({
 		"typescript",
 		"vhs",
 		"vim",
+		"vimdoc",
 		"wgsl",
 		"yaml",
-	},
-	sync_install = false,
-	auto_install = true,
-	ignore_install = {},
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
 	},
 	incremental_selection = {
 		enable = true,
 		keymaps = {
 			init_selection = "<C-space>",
 			node_incremental = "<C-space>",
-			socpe_incremental = false,
+			scope_incremental = false,
 			node_decremental = "<bs>",
 		},
-	},
-	ident = { enable = true },
-	-- requires nvim-ts-autotag
-	autotag = {
-		enable = true,
-	},
-	rainbow = {
-		enable = true,
-		extended_mode = true,
-		max_file_lines = nil,
 	},
 })
