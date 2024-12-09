@@ -1,4 +1,5 @@
 if vim.g.neovide then
+	vim.g.neovide_input_macos_option_key_is_meta = true
 	vim.opt.termguicolors = true
 	local keymapOpts = {
 		silent = true,
