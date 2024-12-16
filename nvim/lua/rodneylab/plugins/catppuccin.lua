@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-	flavour = "default",
+	flavour = "mocha",
 	background = {
 		light = "latte",
 		dark = "mocha",
@@ -7,7 +7,8 @@ require("catppuccin").setup({
 	transparent_background = false,
 	color_overrides = {
 		mocha = {
-			base = "#1b1b29",
+			-- base = "#1b1b29",
+			base = "#181825",
 		},
 	},
 	integrations = {
