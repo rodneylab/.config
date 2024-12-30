@@ -32,6 +32,7 @@ treesitter.setup({
 		"cpp",
 		"css",
 		"dockerfile",
+		"elixir",
 		"gdscript",
 		"gitignore",
 		"graphql",

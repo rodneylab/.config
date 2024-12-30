@@ -92,6 +92,7 @@ local servers = {
 	"docker_compose_language_service",
 	"dockerls",
 	--   "dprint", -- initialised individually below
+	-- "elixirls",
 	"gdscript",
 	"graphql",
 	"html",
@@ -130,6 +131,12 @@ nvim_lsp.dprint.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	fileypes = nvim_lsp.util.root_pattern("dockerfile", "json", "jsonc", "markdown", "toml"),
+})
+
+nvim_lsp.elixirls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = { "/usr/local/Cellar/elixir-ls/0.26.0/libexec/language_server.sh" },
 })
 
 nvim_lsp.lua_ls.setup({
