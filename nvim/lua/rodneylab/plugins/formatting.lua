@@ -4,6 +4,7 @@ conform.setup({
 		cpp = { "clang-format" },
 		cmake = { "cmake_format" },
 		css = { "prettierd", "prettier", stop_after_first = true },
+		elixir = { "mix" },
 		gdscript = { "gdformat" },
 		graphql = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },

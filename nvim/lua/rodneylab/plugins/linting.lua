@@ -2,12 +2,15 @@ local lint = require("lint")
 
 lint.linters_by_ft = {
 	astro = { "eslint_d" },
+	css = { "stylelint" },
+	elixir = { "credo" },
 	javascript = { "eslint_d" },
-	typescript = { "eslint_d" },
 	javascriptreact = { "eslint_d" },
-	typescriptreact = { "eslint_d" },
-	svelte = { "eslint_d" },
 	python = { "ruff" },
+	scss = { "stylelint" },
+	svelte = { "eslint_d" },
+	typescript = { "eslint_d" },
+	typescriptreact = { "eslint_d" },
 }
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
