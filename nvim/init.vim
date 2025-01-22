@@ -50,7 +50,7 @@ set smartcase
 " hide inbuilt mode (using lightline for this)
 set noshowmode
 
-set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NF:h13.5:#e-subpixelantialias
+set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NFM:h13.5:#e-subpixelantialias
 set linespace=5
 " set neovide_scale_factor=1.0
 
@@ -109,16 +109,19 @@ Plug 'rafamadriz/friendly-snippets'
 
 " Linting
 Plug 'mfussenegger/nvim-lint'
+Plug 'microsoft/pyright'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'windwp/nvim-ts-autotag'
 
 " Theme
+Plug 'zaldih/themery.nvim'
 Plug 'joshdick/onedark.vim', { 'as': 'onedark' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa'}
 Plug 'sainnhe/sonokai', { 'as': 'sonokai'}
+Plug '0xstepit/flow.nvim', { 'as': 'flow'}
 
 " Glow Markdown previews
 Plug 'ellisonleao/glow.nvim'
@@ -160,16 +163,19 @@ Plug 'sakhnik/nvim-gdb'
 Plug 'stevearc/dressing.nvim'
 Plug 'ziontee113/icon-picker.nvim'
 
-" Glow Makrkdown preview
+" Glow Markdown preview
 Plug 'ellisonleao/glow.nvim'
 
 call plug#end()
 
+lua require('rodneylab.plugins')
+
+set notermguicolors
 set background=dark
 colorscheme onedark
 
 if exists("g:neovide")
-    colorscheme catppuccin
+lua << END
+require("themery").setThemeByName("Rust", false)
+END
 endif
-
-lua require('rodneylab.plugins')
