@@ -136,7 +136,7 @@ nvim_lsp.dprint.setup({
 nvim_lsp.elixirls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	cmd = { "/usr/local/Cellar/elixir-ls/0.26.0/libexec/language_server.sh" },
+	cmd = { "/usr/local/Cellar/elixir-ls/0.26.2/libexec/language_server.sh" },
 })
 
 nvim_lsp.lua_ls.setup({
@@ -158,6 +158,30 @@ nvim_lsp.marksman.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	filetypes = { "markdown", "markdown.mdx" },
+})
+
+nvim_lsp.pyright.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		pyright = {
+			disableOrganizeImports = true,
+		},
+	},
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client == nil then
+			return
+		end
+		if client.name == "ruff" then
+			client.server_capabilities.hoverProvider = false
+		end
+	end,
+	desc = "LSP: Disable hover capability from Ruff",
 })
 
 -- autoformat on save
