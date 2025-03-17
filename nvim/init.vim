@@ -50,8 +50,8 @@ set smartcase
 " hide inbuilt mode (using lightline for this)
 set noshowmode
 
-set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NFM:h13.5:#e-subpixelantialias
-set linespace=5
+set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NFM:h13.25:#e-subpixelantialias
+set linespace=8
 " set neovide_scale_factor=1.0
 
 " system clipboard
@@ -106,6 +106,7 @@ Plug 'onsails/lspkind-nvim'
 Plug 'mrcjkb/rustaceanvim'
 Plug 'saecki/crates.nvim', { 'tag': 'stable' }
 Plug 'rafamadriz/friendly-snippets'
+Plug 'ggml-org/llama.vim'
 
 " Linting
 Plug 'mfussenegger/nvim-lint'
