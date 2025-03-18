@@ -7,8 +7,7 @@ require("catppuccin").setup({
 	transparent_background = false,
 	color_overrides = {
 		mocha = {
-			-- base = "#1b1b29",
-			base = "#181825",
+			base = "#1b1b29",
 		},
 	},
 	integrations = {
