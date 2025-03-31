@@ -18,7 +18,7 @@ conform.setup({
 		markdown = { "prettierd", "prettier", "dprint", stop_after_first = true },
 		python = { "ruff" },
 		sh = { "shfmt" },
-		sql = { "sleek" },
+		sql = { "sleek", "sqruff", "sleek", stop_after_first = false },
 		svelte = { "prettierd", "prettier", stop_after_first = true },
 		toml = { "dprint" },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
