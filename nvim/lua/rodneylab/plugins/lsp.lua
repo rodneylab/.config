@@ -136,7 +136,7 @@ nvim_lsp.dprint.setup({
 nvim_lsp.elixirls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	cmd = { "/usr/local/Cellar/elixir-ls/0.26.2/libexec/language_server.sh" },
+	cmd = { "/usr/local/Cellar/elixir-ls/0.27.2/libexec/language_server.sh" },
 })
 
 nvim_lsp.lua_ls.setup({
@@ -185,15 +185,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- autoformat on save
-vim.cmd("autocmd BufWritePre *.cc lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.cpp lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.h lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.lua lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.md* lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.py lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.rs lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.toml lua vim.lsp.buf.format({async = false})")
-vim.cmd("autocmd BufWritePre *.ts lua vim.lsp.buf.format({async = false})")
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function(args)
+		require("conform").format({ bufnr = args.buf })
+	end,
+})
 
 -- nvim-cmp
 local cmp = require("cmp")
