@@ -123,6 +123,8 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa'}
 Plug 'sainnhe/sonokai', { 'as': 'sonokai'}
 Plug '0xstepit/flow.nvim', { 'as': 'flow'}
+Plug 'Shatur/neovim-ayu', { 'as': 'ayu'}
+Plug 'projekt0n/github-nvim-theme', { 'as': 'github'}
 
 " Glow Markdown previews
 Plug 'ellisonleao/glow.nvim'
