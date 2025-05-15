@@ -31,6 +31,7 @@ treesitter.setup({
 		"cmake",
 		"cpp",
 		"css",
+		"dart",
 		"dockerfile",
 		"elixir",
 		"gdscript",
