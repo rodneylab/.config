@@ -89,6 +89,8 @@ local servers = {
 	"cmake",
 	"csharp_ls",
 	"cssls",
+	"dartls",
+	"djlsp",
 	"docker_compose_language_service",
 	"dockerls",
 	--   "dprint", -- initialised individually below
