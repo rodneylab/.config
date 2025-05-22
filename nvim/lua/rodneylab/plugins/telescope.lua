@@ -1,17 +1,19 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
 local lga_actions = require("telescope-live-grep-args.actions")
-local builtin = require("telescope.builtin")
-local action_state = require("telescope.actions.state")
 
 telescope.setup({
 	defaults = {
 		path_display = { "smart" },
 		file_ignore_patterns = { "node_modules", "target" },
 		mappings = {
+			n = {
+				["<c-d>"] = actions.delete_buffer,
+			},
 			i = {
 				["<C-k>"] = actions.move_selection_previous,
 				["<C-j>"] = actions.move_selection_next,
+				["<c-d>"] = actions.delete_buffer,
 			},
 		},
 		vimgrep_arguments = {
@@ -24,6 +26,7 @@ telescope.setup({
 			"--column",
 			"--smart-case",
 			"-uu", -- => --no-ignore (.gitignore and .ignore files not ignored) and also --hidden (hidden files and directories will be included)
+			"--glob=!rusty-tags.vi",
 		},
 	},
 	extensions = {
@@ -54,23 +57,7 @@ keymap.set(
 	":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
 	{ silent = true, noremap = true }
 )
-keymap.set("n", "<leader>fb", function()
-	builtin.buffers({
-		initial_mode = "normal",
-		attach_mappings = function(prompt_bufnr, map)
-			local delete_buf = function()
-				local current_picker = action_state.get_current_picker(prompt_bufnr)
-				current_picker:delete_selection(function(selection)
-					vim.api.nvim_buf_delete(selection.bufnr, { force = true })
-				end)
-			end
-
-			map("n", "<C-x>", delete_buf)
-
-			return true
-		end,
-	}, { sort_lastused = true, sort_mru = true, theme = "dropdown" })
-end)
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { silent = true, noremap = true })
 keymap.set(
 	"n",
 	"<leader>fc",
