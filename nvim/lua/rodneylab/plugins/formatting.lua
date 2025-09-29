@@ -2,7 +2,7 @@ local conform = require("conform")
 conform.setup({
 	formatters_by_ft = {
 		cpp = { "clang-format" },
-		cmake = { "cmake_format" },
+		cmake = { "gersemi" },
 		css = { "prettierd", "prettier", stop_after_first = true },
 		dart = { "dart_format", "dcm_fix", stop_after_first = false },
 		elixir = { "mix" },
@@ -15,7 +15,6 @@ conform.setup({
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 		json = { "prettierd", "prettier", "dprint", stop_after_first = true },
-		-- markdown = { "deno_fmt", "prettierd", "prettier", "dprint", stop_after_first = true },
 		markdown = { "prettierd", "prettier", "dprint", stop_after_first = true },
 		python = { "ruff" },
 		sh = { "shfmt" },
@@ -24,6 +23,7 @@ conform.setup({
 		toml = { "dprint" },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+		vue = { "prettierd", "prettier", stop_after_first = true },
 		yaml = { "yamlfmt" },
 	},
 	format_on_save = {
