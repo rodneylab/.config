@@ -5,6 +5,7 @@ conform.setup({
 		cmake = { "gersemi" },
 		css = { "prettierd", "prettier", stop_after_first = true },
 		dart = { "dart_format", "dcm_fix", stop_after_first = false },
+		dockerfile = { "dockerfmt" },
 		elixir = { "mix" },
 		gdscript = { "gdformat" },
 		graphql = { "prettierd", "prettier", stop_after_first = true },
