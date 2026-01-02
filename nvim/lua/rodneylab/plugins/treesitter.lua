@@ -1,4 +1,4 @@
-local treesitter = require("nvim-treesitter.configs")
+local treesitter = require("nvim-treesitter")
 
 treesitter.wgsl = {
 	install_info = {
@@ -37,6 +37,7 @@ treesitter.setup({
 		"gdscript",
 		"gitignore",
 		"graphql",
+		"hlsplaylist",
 		"html",
 		"javascript",
 		"json",
@@ -47,6 +48,7 @@ treesitter.setup({
 		"muttrc",
 		"prisma",
 		"proto",
+		"regex",
 		"rust",
 		"sql",
 		"svelte",
@@ -57,6 +59,7 @@ treesitter.setup({
 		"vhs",
 		"vim",
 		"vimdoc",
+		"vue",
 		"wgsl",
 		"yaml",
 	},
