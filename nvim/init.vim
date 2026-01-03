@@ -6,29 +6,14 @@ syntax on
 " termguicolors enabled for Neovide in neovide.lua
 set notermguicolors
 
-" number of spaces in a <Tab>
-" set tabstop=4
-" set softtabstop=4
-" set expandtab
-
-" enable autoindents
-" set smartindent
 filetype plugin indent on
 
 " number of spaces used for autoindents
 set shiftwidth=4
 
-" adds line numbers
-" set number
-" set relativenumber
-
 " highlights the matched text pattern when searching
 set incsearch
 set nohlsearch
-
-" opens splits intuitively
-" set splitbelow
-" set splitright
 
 " navigate buffers without losing unsaved work
 set hidden
@@ -52,10 +37,6 @@ set noshowmode
 
 set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NFM:h13.25:#e-subpixelantialias
 set linespace=8
-" set neovide_scale_factor=1.0
-
-" system clipboard
-"set clipboard+=unnamedplus
 
 " completion
 set completeopt=menuone,noselect,noinsert
@@ -82,6 +63,9 @@ Plug 'lewis6991/gitsigns.nvim'
 " Lazygit
 Plug 'kdheepak/lazygit.nvim'
 
+" Octo
+Plug 'pwntester/octo.nvim'
+
 " LSP
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -99,10 +83,9 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
-Plug 'L3MON4D3/LuaSnip'
+Plug 'L3MON4D3/LuaSnip', { 'do': 'make install jsregexp'}
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
-" Plug 'simrat39/rust-tools.nvim' deprecated, replaced by mrcjkb/rustaceanvim
 Plug 'mrcjkb/rustaceanvim'
 Plug 'saecki/crates.nvim', { 'tag': 'stable' }
 Plug 'rafamadriz/friendly-snippets'
@@ -145,12 +128,10 @@ Plug 'folke/todo-comments.nvim'
 Plug 'https://tpope.io/vim/unimpaired'
 
 " comments
-" Plug 'https://tpope.io/vim/commentary'
 Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " file explorer
-" Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
 " tab styling
@@ -163,7 +144,7 @@ Plug 'stevearc/conform.nvim'
 Plug 'sakhnik/nvim-gdb'
 
 " icon-picker for Emoji
-Plug 'stevearc/dressing.nvim'
+Plug 'folke/snacks.nvim'
 Plug 'ziontee113/icon-picker.nvim'
 
 " Glow Markdown preview

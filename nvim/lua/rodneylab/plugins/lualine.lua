@@ -1,3 +1,12 @@
+local treesitter = require("nvim-treesitter")
+local function treelocation()
+	return treesitter.statusline({
+		indicator_size = 70,
+		type_paterns = { "class", "function", "method" },
+		separator = " ->",
+	})
+end
+
 if vim.g.neovide then
 	-- override built-in catpuccin theme
 	local C = require("catppuccin.palettes").get_palette("mocha")
@@ -8,6 +17,9 @@ if vim.g.neovide then
 	require("lualine").setup({
 		options = {
 			theme = custom_catppucin,
+		},
+		sections = {
+			lualine_c = { "filename", { treelocation } },
 		},
 	})
 else
