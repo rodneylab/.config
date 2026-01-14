@@ -1,0 +1,33 @@
+theme = "ayu_mirage"
+# theme = "kanagawa"
+# theme = "tokyonight_storm"
+
+[editor]
+jump-label-alphabet = "asqwdfzxercvgtbjkhuyilnmop"
+
+[editor.cursor-shape]
+insert = "bar"
+
+# [editor.search]
+# smart-case = false
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+"*" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "make_search_word_bounded",
+  "search_next",
+]
+"#" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "make_search_word_bounded",
+  "search_prev",
+]
