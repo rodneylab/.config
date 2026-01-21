@@ -35,7 +35,7 @@ set smartcase
 " hide inbuilt mode (using lightline for this)
 set noshowmode
 
-set guifont=Iosevka\ Custom\ New,JetBrains\ Mono,IosevkaTerm\ NFM:h13.5:#e-subpixelantialias
+set guifont=Iosevka\ Custom,JetBrains\ Mono,IosevkaTerm\ NFM:h13.5:#e-subpixelantialias
 set linespace=8
 
 " completion

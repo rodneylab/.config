@@ -54,8 +54,8 @@ vim.opt.linespace = 4
 			colorscheme = "github_dark_dimmed",
 			before = [[
 vim.cmd("colorscheme github_dark_dimmed")
-vim.opt.guifont = "Fira Code,JetBrains Mono,IosevkaTerm NFM:h13.5:#e-subpixelantialias"
-vim.opt.linespace = 5
+vim.opt.guifont = "Anonymous Pro,JetBrains Mono,IosevkaTerm NFM:h15:#e-subpixelantialias"
+vim.opt.linespace = 7
             ]],
 		},
 		{
