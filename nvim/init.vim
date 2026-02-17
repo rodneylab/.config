@@ -143,9 +143,9 @@ Plug 'stevearc/conform.nvim'
 " lldb
 Plug 'sakhnik/nvim-gdb'
 
-" icon-picker for Emoji
+" Emoji
 Plug 'folke/snacks.nvim'
-Plug 'ziontee113/icon-picker.nvim'
+Plug 'Allaman/emoji.nvim'
 
 " Glow Markdown preview
 Plug 'ellisonleao/glow.nvim'
