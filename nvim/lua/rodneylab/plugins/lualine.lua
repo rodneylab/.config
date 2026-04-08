@@ -8,7 +8,6 @@ local function treelocation()
 end
 
 if vim.g.neovide then
-	-- override built-in catpuccin theme
 	require("lualine").setup({
 		sections = {
 			lualine_c = { "filename", { treelocation } },
