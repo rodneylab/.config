@@ -18,6 +18,7 @@ conform.setup({
 		json = { "oxfmt", "prettierd", "prettier", "dprint", stop_after_first = true },
 		markdown = { "prettierd", "prettier", "dprint", "markdownlint-cli2", "markdown-toc", stop_after_first = true },
 		python = { "ruff" },
+		rust = { "topcoat", lsp_format = "first" },
 		sh = { "shfmt" },
 		sql = { "sleek", "sqruff", stop_after_first = false },
 		svelte = { "prettierd", "prettier", stop_after_first = true },
@@ -31,13 +32,21 @@ conform.setup({
 	format_on_save = {
 		lsp_fallback = true,
 		async = false,
-		timeout_ms = 1000,
+		timeout_ms = 1500,
 	},
 })
 conform.formatters.gdformat = {
 	command = "uv",
 	prepend_args = function(_, _)
 		return { "run", "gdformat" }
+	end,
+}
+conform.formatters.topcoat = {
+	command = "topcoat",
+	args = { "fmt", "--stdin" },
+	require_cwd = true,
+	cwd = function(self, ctx)
+		return require("conform.util").root_file({ "Topcoat.toml" })(self, ctx)
 	end,
 }
 
